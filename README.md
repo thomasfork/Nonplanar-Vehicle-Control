@@ -8,7 +8,9 @@ Publications and demonstration videos below. Python scripts corresponding to pub
 Publications: 
 
 https://arxiv.org/abs/2104.08427 (main_itsc.py)
+
 TODO (main_raceline.py)
+
 TODO (main_overtaking.py)
 
 
