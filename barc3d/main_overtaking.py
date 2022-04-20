@@ -1,6 +1,5 @@
 '''
 Script for demonstrating raceline computation and use for overtaking
-Primarily meant for ICRA 2022 publication
 '''
 from barc3d.surfaces import load_surface
 from barc3d.games.overtaking import OvertakingConfig, StackelbergOvertaking
