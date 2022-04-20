@@ -1,6 +1,5 @@
 '''
 Script for demonstrating raceline computation and evaluation
-Primarily meant for AVEC 2022 publication
 '''
 import numpy as np
 
