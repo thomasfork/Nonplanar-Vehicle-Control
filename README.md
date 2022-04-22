@@ -9,7 +9,7 @@ Publications and demonstration videos below. Python scripts corresponding to pub
 
 https://arxiv.org/abs/2104.08427 (main_itsc.py)
 
-TODO (main_raceline.py)
+https://arxiv.org/abs/2204.09720 (main_raceline.py)
 
 TODO (main_overtaking.py)
 
