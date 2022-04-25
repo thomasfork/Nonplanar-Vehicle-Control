@@ -11,7 +11,7 @@ https://arxiv.org/abs/2104.08427 (main_itsc.py)
 
 https://arxiv.org/abs/2204.09720 (main_raceline.py)
 
-TODO (main_overtaking.py)
+https://arxiv.org/abs/2204.10446 (main_overtaking.py)
 
 ## Videos:
 
