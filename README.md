@@ -9,9 +9,9 @@ Publications and demonstration videos below. Python scripts corresponding to pub
 
 https://arxiv.org/abs/2104.08427 (main_itsc.py)
 
-TODO (main_raceline.py)
+https://arxiv.org/abs/2204.09720 (main_raceline.py)
 
-TODO (main_overtaking.py)
+https://arxiv.org/abs/2204.10446 (main_overtaking.py)
 
 ## Videos:
 
@@ -19,6 +19,6 @@ Path following: https://youtu.be/KHP0uUW4oHY
 
 Racelines: https://youtu.be/4nCYGlKpd2A
 
-OVertaking: https://youtu.be/5S-VfrV-d28
+Overtaking: https://youtu.be/5S-VfrV-d28
 
 
