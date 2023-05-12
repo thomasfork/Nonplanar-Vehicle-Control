@@ -131,6 +131,7 @@ class Window():
         self.window_height = 1080
         self.window_objects = dict()
         self.window_resized = False
+        self.window_open=True
         
         self.impl = None
         
@@ -169,6 +170,10 @@ class Window():
         
         # gather events    
         glfw.poll_events()
+        if not self.window_open:
+            # delay as if there were a refresh delay
+            time.sleep(1/60)
+            return self.should_close
         self.impl.process_inputs()
         
         # draw imgui   
@@ -285,6 +290,11 @@ class Window():
             
     def _on_resize(self, window, w, h):
         if self.window:
+            if w == 0 or h == 0:
+                self.window_open = False
+                return
+            else:
+                self.window_open = True
             self.window_width = w
             self.window_height = h  
             gl.glViewport(0,0,self.window_width,self.window_height)
@@ -384,17 +394,17 @@ class Window():
         d1 =-self.camera_follow_q.e1() * dx * self.camera_follow_z / 1500
         d2 = self.camera_follow_q.e2() * dy * self.camera_follow_z / 1500
         
-        self.camera_follow_x.xi += d1[0] + d2[0]
-        self.camera_follow_x.xj += d1[1] + d2[1]
-        self.camera_follow_x.xk += d1[2] + d2[2]
+        self.camera_follow_x.xi += float(d1[0] + d2[0])
+        self.camera_follow_x.xj += float(d1[1] + d2[1])
+        self.camera_follow_x.xk += float(d1[2] + d2[2])
         return
         
     def _update_scroll_mouse_drag(self, dx, dy): 
         d1 = self.camera_follow_q.e3() * dy * self.camera_follow_z / 300
         
-        self.camera_follow_x.xi += d1[0] 
-        self.camera_follow_x.xj += d1[1] 
-        self.camera_follow_x.xk += d1[2] 
+        self.camera_follow_x.xi += float(d1[0])
+        self.camera_follow_x.xj += float(d1[1])
+        self.camera_follow_x.xk += float(d1[2])
         return
     
     

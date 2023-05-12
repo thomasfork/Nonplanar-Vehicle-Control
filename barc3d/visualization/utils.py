@@ -177,7 +177,7 @@ def plot_multiline(time, data, colors, labels, title, t_min = None, t_max = None
         py = (line - y_min) / (y_max - y_min)
         py = y0 + 1 + (size[1]-2) * (1 - py)
         
-        draw_list.add_polyline(np.array([px,py]).T.tolist(), color, closed=False)
+        draw_list.add_polyline(np.array([px,py]).T.tolist(), color)
     
     
     imgui.begin_child(title, size[0], size[1], border=True)

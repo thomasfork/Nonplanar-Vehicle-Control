@@ -34,7 +34,7 @@ def interpolate_collocation(w, H, X, config: 'RacelineConfig'):
     
     n = X[0,0].size()[0]
     
-    tp = ca.cumsum(ca.vertcat(0,H))
+    tp = ca.cumsum(ca.vertcat(0,*H))
     
     pc = np.resize(np.array([], dtype = ca.SX), (K+1, n))
     for l in range(n):
@@ -48,7 +48,7 @@ def interpolate_collocation(w, H, X, config: 'RacelineConfig'):
         pc[j,l] = ca.pw_const(t, tp, xp.T)
     
     t_offset = ca.pw_const(t, tp, ca.vertcat(0, tp))
-    h = ca.pw_const(t, tp, ca.vertcat(1,H,1))
+    h = ca.pw_const(t, tp, ca.vertcat(1,*H,1))
     
     rel_t = (t - t_offset) / h
     p = [0] * n

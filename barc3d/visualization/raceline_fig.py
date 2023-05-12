@@ -256,7 +256,7 @@ class RacelineWindow(Window):
         self.animation_t0 = time.time()
             
         _, self.animation_t  = imgui.slider_float('Time',self.animation_t, min_value = self.t_min, max_value = self.t_max)
-        _, self.animation_dt = imgui.slider_float('Speed',self.animation_dt, min_value = 0.1, max_value = 10,power = 2)
+        _, self.animation_dt = imgui.slider_float('Speed',self.animation_dt, min_value = 0.1, max_value = 10, flags=imgui.SLIDER_FLAGS_LOGARITHMIC)
         
         vbar = np.clip((self.animation_t - self.t_min)/(self.t_max - self.t_min), 0, 1)
         
@@ -400,8 +400,8 @@ class RacelineWindow(Window):
                             [ tire_w/2,  tire_l/2],
                             [-tire_w/2,  tire_l/2]]) @ np.array([[np.cos(yfl), -np.sin(yfl)],[np.sin(yfl), np.cos(yfl)]]) + np.array([[x0 - tf, y0 - lf]])
             
-            draw_list.add_polyline(xfr.tolist(), white, closed = True, thickness = thickness)
-            draw_list.add_polyline(xfl.tolist(), white, closed = True, thickness = thickness)
+            draw_list.add_polyline(xfr.tolist(), white, thickness = thickness)
+            draw_list.add_polyline(xfl.tolist(), white, thickness = thickness)
             
             imgui.push_font(self.big_imgui_font)
             draw_list.add_text(x0 + 120, y0 + 80, white, '%0.2fm/s'%v)
