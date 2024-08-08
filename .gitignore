@@ -38,15 +38,14 @@ ENV/
 env.bak/
 venv.bak/
 
-# codegen
-*.c
-*so
-
-# ros2
-build
-install
-log
-
-
 #imgui
 imgui.ini
+
+# screen recordings
+recordings
+
+# code gen
+build
+
+# data
+*.pkl
