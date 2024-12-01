@@ -2,7 +2,17 @@
 This package provides tools for the simulation, modeling, planning and control of ground vehicles.
 
 # Citing
-Once my dissertation is published it will be possible to cite that for all purposes. Until then, an outline of papers that may be cited for appropriate purposes is given below:
+For most intents and purposes, citing my dissertation will suffice. It is avaible open access at https://www.proquest.com/openview/354e67da3819f973e7e9d756c0006a67
+```
+@phdthesis{fork2024non,
+  title={Non-Euclidean Vehicle Motion Models},
+  author={Fork, Thomas David},
+  year={2024},
+  school={University of California, Berkeley}
+}
+```
+
+Those looking to cite earlier papers may find the following useful:
 
 
 Original theory and development. Application to a simplified lane-keeping scenario. https://arxiv.org/abs/2104.08427
@@ -55,7 +65,7 @@ pip3 install -e .
 Self-contained code examples are provided in the ```examples/``` folder of this repository.
 
 ## Known Issues
-Nonlinear optimization problems solved with IPOPT using CasADi 3.6+ default to a newer version of MUMPS which is known to perform worse on certain problems than earlier versions. Downgrading to CasADi version 3.5.5 is strongly recommended. On Linux it is possible to use HSL solvers, using https://github.com/coin-or-tools/ThirdParty-HSL. All examples will default to HSL solvers if they are installed.
+Nonlinear optimization problems solved with IPOPT using CasADi 3.6+ default to a newer version of MUMPS which is known to perform worse on certain problems than earlier versions, particularly those using orthogonal collocation. Downgrading to CasADi version 3.5.5 is strongly recommended. On Linux it is possible to use HSL solvers, using https://github.com/coin-or-tools/ThirdParty-HSL. All examples will default to HSL solvers if they are installed.
 
 
 # Acknowledgements
