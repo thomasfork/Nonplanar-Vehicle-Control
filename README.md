@@ -1,4 +1,4 @@
-# Nonplanar Vehcile Control
+# Nonplanar Vehicle Control
 This package provides tools for the simulation, modeling, planning and control of ground vehicles.
 
 # Citing
