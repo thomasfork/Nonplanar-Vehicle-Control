@@ -115,10 +115,10 @@ def _window_extras():
             planner_s[k] = s
             planner_y[k] = y
             planner_ths[k] = ths
-            ths += kappa * delta / 2
-            s += delta * np.cos(ths)
-            y += delta * np.sin(ths)
-            ths += kappa * delta / 2
+            ths += kappa[0] * delta[0] / 2
+            s += delta[0] * np.cos(ths)
+            y += delta[0] * np.sin(ths)
+            ths += kappa[0] * delta[0] / 2
 
         planner.solve(sim_state.vb.mag(), planner_s, planner_y, planner_ths)
         planner.current_plan.update_triangulated_plan(vis_plan, sim_surf)
