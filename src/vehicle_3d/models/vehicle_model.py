@@ -648,12 +648,12 @@ class AnimatedCar:
         if color is None:
             lambo = GLTFObject(get_assets_file('lambo.glb'), ubo, lambo_size, cull_faces=False,
                             ignored_nodes=[f'Object_{k}' for k in
-                                            [8,11,17,18,23,24,25,26,27,34,35,36,37,38,39]],
+                                            [16,17,22,23,24,25,31,32,34,35,36,37,38,39,41]],
                                 )
         else:
             lambo = GLTFObject(get_assets_file('lambo.glb'), ubo, lambo_size, cull_faces=False,
                             ignored_nodes=[f'Object_{k}' for k in
-                                            [8,11,17,18,23,24,25,26,27,34,35,36,37,38,39]],
+                                            [16,17,22,23,24,25,31,32,34,35,36,37,38,39,41]],
                                 matl_color_swaps={'Material.012':color}
                                 )
 
