@@ -27,8 +27,11 @@ class BasePolytopeObstacle(BaseObstacle):
     A: np.ndarray = field(default = None)  # single ended constraints
     b: np.ndarray = field(default = None)
 
-    color: List[float] = field(default = np.array([1,0,0,1]))
+    color: List[float] = field(default = None)
 
+    def __post_init__(self):
+        if self.color is None:
+            self.colr = np.array([1., 0, 0, 1.])
     @abstractmethod
     def update(self):
         '''
